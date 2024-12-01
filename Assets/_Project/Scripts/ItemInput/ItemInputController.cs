@@ -37,13 +37,6 @@ public class ItemInputController : MonoBehaviour
     {
         _offerIndex = index;
         SelectedOfferModel = Data.AllOffers[_offerIndex].Model;
-
-        print("begin print");
-        foreach (var itemStack in SelectedOfferModel.itemStacks)
-        {
-            print(itemStack.amount);
-        }
-
         _itemInputView.Display(SelectedOfferModel);
     }
 

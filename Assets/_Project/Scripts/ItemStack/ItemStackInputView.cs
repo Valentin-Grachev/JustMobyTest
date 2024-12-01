@@ -9,14 +9,11 @@ public class ItemStackInputView : MonoBehaviour
 
     public void Display(ItemStackModel model)
     {
-        
         gameObject.SetActive(true);
-        _image.sprite = Sprites.GetItemIcon(model.itemType);
+        _image.sprite = Sprites.GetItemIcon(model.itemId);
 
-        if (model.amount == 0) _inputField.text = string.Empty;
-        else _inputField.text = model.amount.ToString();
-
-        print($"{name} display: {model.amount}");
+        string text = model.amount == 0 ? string.Empty : model.amount.ToString();
+        _inputField.SetTextWithoutNotify(text);
     }
 
     public void Hide() => gameObject.SetActive(false);

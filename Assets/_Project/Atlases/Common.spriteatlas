@@ -37,6 +37,7 @@ SpriteAtlas:
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: 2159aec13bb51b243b8836f614242684, type: 3}
   - {fileID: 21300000, guid: 2d93aa23d34c2354b8ec138ebad639b3, type: 3}
   - {fileID: 21300000, guid: 0ffe33b4f599cb445b6c590639b1aaea, type: 3}
   - {fileID: 21300000, guid: 6101fb85bb211a2459172f05a4269c36, type: 3}
@@ -45,6 +46,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 0347f36865b55514a8294c907ef69a1b, type: 3}
   - {fileID: 21300000, guid: 25b7645c80804444bbe62b57663fa59e, type: 3}
   m_PackedSpriteNamesToIndex:
+  - Resources
   - Barrel
   - Chip
   - Bullet

@@ -2,6 +2,6 @@
 [System.Serializable]
 public struct ItemStackModel
 {
-    public ItemId itemType;
+    public ItemId itemId;
     public int amount;
 }

@@ -11,7 +11,7 @@ public class ItemStackView : MonoBehaviour
     public void Display(ItemStackModel model)
     {
         gameObject.SetActive(true);
-        _image.sprite = Sprites.GetItemIcon(model.itemType);
+        _image.sprite = Sprites.GetItemIcon(model.itemId);
 
         if (model.amount == 0) 
             _amountText.gameObject.SetActive(false);

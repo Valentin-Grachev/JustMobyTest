@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 398487375}
   - component: {fileID: 398487374}
   m_Layer: 5
-  m_Name: DiscountedPriceText
+  m_Name: CrossoutPriceText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -492,7 +492,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $fs
+  m_text: $<crossout_price>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -524,7 +524,7 @@ MonoBehaviour:
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 44
   m_fontStyle: 64
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -1060,12 +1060,12 @@ GameObject:
   m_Component:
   - component: {fileID: 586051998}
   m_Layer: 5
-  m_Name: Origin
+  m_Name: NoDiscountSector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &586051998
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1612,7 +1612,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $
+  m_text: $<price>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1621,8 +1621,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1639,12 +1639,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 60
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 60
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -1919,7 +1919,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: -53%
+  m_text: <disc>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1946,7 +1946,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35.3
+  m_fontSize: 27.3
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2676,6 +2676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _titleText: {fileID: 537067333}
   _descriptionText: {fileID: 1371553232}
+  _mainIcon: {fileID: 1682690098}
   _itemStackViews:
   - {fileID: 977341288}
   - {fileID: 355168941}
@@ -2683,9 +2684,12 @@ MonoBehaviour:
   - {fileID: 1590931379}
   - {fileID: 669577818}
   - {fileID: 1647188766}
-  _priceText: {fileID: 0}
-  _discountMark: {fileID: 0}
-  _discountText: {fileID: 0}
+  _priceWithoutDiscountText: {fileID: 761862167}
+  _noDiscountSector: {fileID: 586051997}
+  _discountSector: {fileID: 1264383695}
+  _discountMarkText: {fileID: 914828058}
+  _discountedPriceText: {fileID: 2133050375}
+  _crossountPriceText: {fileID: 398487374}
 --- !u!1 &1195960478
 GameObject:
   m_ObjectHideFlags: 0
@@ -2817,12 +2821,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1264383696}
   m_Layer: 5
-  m_Name: Discount
+  m_Name: DiscountSector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1264383696
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3794,7 +3798,7 @@ GameObject:
   - component: {fileID: 1682690099}
   - component: {fileID: 1682690098}
   m_Layer: 5
-  m_Name: Icon
+  m_Name: MainIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4424,7 +4428,7 @@ GameObject:
   - component: {fileID: 1984053963}
   - component: {fileID: 1984053962}
   m_Layer: 5
-  m_Name: Mark
+  m_Name: PromoMark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4919,7 +4923,7 @@ GameObject:
   - component: {fileID: 2133050376}
   - component: {fileID: 2133050375}
   m_Layer: 5
-  m_Name: OriginPriceText
+  m_Name: DiscountedPriceText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4991,12 +4995,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.75
+  m_fontSize: 44
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 44
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512

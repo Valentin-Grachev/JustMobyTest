@@ -13,14 +13,16 @@ MonoBehaviour:
   m_Name: Ammunition
   m_EditorClassIdentifier: 
   _model:
-    title: "\u0443\u043A\u0432\u043F\u043F\u0432\u044B"
-    description: " \u0444\u0430\u044B\u0430\u0444\u044B\u0430\u0444"
+    title: "\u041E\u0440\u0443\u0436\u0435\u0439\u043D\u044B\u0439 \u043D\u0430\u0431\u043E\u0440"
+    description: "\u0414\u043B\u044F \u043A\u0440\u0443\u0442\u044B\u0445 \u0441\u0442\u0440\u0435\u043B\u043A\u043E\u0432!"
     iconId: 1
     itemStacks:
-    - itemType: 0
+    - itemId: 3
       amount: 0
-    - itemType: 1
+    - itemId: 0
       amount: 0
-    priceUSD: 0
-    useDiscount: 0
-    discountedPriceUSD: 0
+    - itemId: 2
+      amount: 0
+    priceUSD: 9.99
+    useDiscount: 1
+    discountedPriceUSD: 2.99
