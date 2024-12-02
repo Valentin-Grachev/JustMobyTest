@@ -21,7 +21,7 @@ public class OfferView : MonoBehaviour
 
     public void Display(OfferModel model)
     {
-        gameObject.SetActive(true);
+        new ScaleUpTween(gameObject);
 
         _titleText.text = model.title;
         _descriptionText.text = model.description;
@@ -50,7 +50,7 @@ public class OfferView : MonoBehaviour
         else _priceWithoutDiscountText.text = $"${model.priceUSD:F2}";
     }
 
-    public void Hide() => gameObject.SetActive(false);
+    public void Hide() => new ScaleDownTween(gameObject);
 
 
 
